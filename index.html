@@ -8,30 +8,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #ffd6e0, #fceabb);
-      font-family: 'Quicksand', sans-serif;
-      color: #333;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      font-family: 'Quicksand', sans-serif;
+      color: #333;
+      background: linear-gradient(135deg, #ffd6e0, #fceabb);
+      background-image: url('img1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
-    .container {
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       text-align: center;
+      padding: 20px;
     }
+
     h1 {
       font-family: 'Pacifico', cursive;
       font-size: 3rem;
       color: #d63384;
     }
+
     p {
       font-size: 1.2rem;
       margin: 15px 0;
     }
+
     .btn-reveal {
       background-color: #ff66a3;
       border: none;
@@ -42,9 +52,11 @@
       margin-top: 20px;
       transition: 0.3s ease;
     }
+
     .btn-reveal:hover {
       background-color: #e05590;
     }
+
     .card {
       background: white;
       padding: 30px;
@@ -54,22 +66,10 @@
       display: none;
       margin-top: 30px;
     }
-    .confetti {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      background: url('Img1.JPG');
-      background-size: cover;
-      opacity: 0.2;
-    }
   </style>
 </head>
 <body>
-  <div class="confetti"></div>
-  <div class="container">
+  <div class="overlay">
     <h1>🎉 Happy Birthday, [Her Name]! 🎂</h1>
     <p>You’re not just a colleague, you’re a friend who makes everything sweeter and brighter 💖</p>
     <button class="btn-reveal" onclick="document.querySelector('.card').style.display='block'">Click to Reveal Your Surprise 🎁</button>
