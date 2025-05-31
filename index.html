@@ -11,24 +11,18 @@
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', sans-serif;
-      color: #333;
       background: linear-gradient(135deg, #ffd6e0, #fceabb);
-      background-image: url('img1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      color: #333;
+      overflow-x: hidden;
     }
 
-    .overlay {
-      background-color: rgba(255, 255, 255, 0.85);
+    .container {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding: 20px;
     }
 
     h1 {
@@ -57,27 +51,53 @@
       background-color: #e05590;
     }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
-      max-width: 500px;
+    .surprise {
       display: none;
+      flex-direction: column;
+      align-items: center;
       margin-top: 30px;
+      animation: popUp 1s ease-out forwards;
+    }
+
+    .surprise img {
+      width: 200px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-size: 1.3rem;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>🎉 Happy Birthday, Priyanka! 🎂</h1>
+  <div class="container">
+    <h1>🎉 Happy Birthday, [Her Name]! 🎂</h1>
     <p>You’re not just a colleague, you’re a friend who makes everything sweeter and brighter 💖</p>
-    <button class="btn-reveal" onclick="document.querySelector('.card').style.display='block'">Click to Reveal Your Surprise 🎁</button>
+    <button class="btn-reveal" onclick="showSurprise()">Click to Reveal Your Surprise 🎁</button>
 
-    <div class="card">
-      <p>From being the sweetest soul at work to being the reason the day feels lighter, you’re simply the best!</p>
-      <p>Here’s to more laughs, memories, and cake days! 🍰💫</p>
+    <div id="surprise" class="surprise">
+      <img src="cat_flower.png" alt="Cute cat with flower" />
+      <div class="message">Here’s a flower from your silent admirer 🌸😺<br>Have the happiest birthday ever!</div>
     </div>
   </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surprise').style.display = 'flex';
+    }
+  </script>
 </body>
 </html>
