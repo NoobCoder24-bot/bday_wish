@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Happy Birthday 🎉</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #ffd6e0, #fceabb);
+      background:
+        linear-gradient(rgba(255, 214, 224, 0.6), rgba(252, 234, 187, 0.6)),
+        url('Img1.JPG') no-repeat center 20%;
+      background-size: cover;
       color: #333;
       overflow-x: hidden;
+      min-height: 150vh; /* so page is scrollable */
+
     }
 
     .container {
@@ -23,6 +28,7 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      padding: 40px 20px;
     }
 
     h1 {
@@ -45,6 +51,7 @@
       font-weight: bold;
       margin-top: 20px;
       transition: 0.3s ease;
+      cursor: pointer;
     }
 
     .btn-reveal:hover {
@@ -84,13 +91,15 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎉 Happy Birthday, [Her Name]! 🎂</h1>
-    <p>You’re not just a colleague, you’re a friend who makes everything sweeter and brighter 💖</p>
+    <h1>🎉 Happy Birthday, Priyanka! 🎂</h1>
+    <p>You’re one good friend I’ve got recently—truly a senior who turned out to be a best friend! 😊</p>
     <button class="btn-reveal" onclick="showSurprise()">Click to Reveal Your Surprise 🎁</button>
 
     <div id="surprise" class="surprise">
-      <img src="https://github.com/NoobCoder24-bot/bday_wish/blob/main/cat.png" alt="Cute cat with flower" />
-      <div class="message">Here’s a flower from your silent admirer 🌸😺<br>Have the happiest birthday ever!</div>
+      <img src="cat.png" />
+      <div class="message">You’re one good friend I’ve got recently—truly a senior who turned out to be a best friend! 😊 </div>
+      <div class="message">Wishing you a year filled with happiness, wins, and smiles (the ones you’re great at spreading). ✨<br>Have the happiest birthday ever!</div>
+      <div class="message">P.S. Don’t lose too much weight — not just your mom, everybody (including me) will miss your adorable cheeks! 😄<br>Have the happiest birthday ever!</div>
     </div>
   </div>
 
